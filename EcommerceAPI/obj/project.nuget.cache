@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+ayeRmzOCpg=",
+  "dgSpecHash": "DtE1sTeidEY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\divya\\Downloads\\TRENDS-2\\TRENDS-2\\Etrends\\EcommerceAPI\\EcommerceAPI.csproj",
+  "projectFilePath": "C:\\Users\\divya\\OneDrive\\Desktop\\TRENDS\\TRENDS\\Etrends\\EcommerceAPI\\EcommerceAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\divya\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\divya\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

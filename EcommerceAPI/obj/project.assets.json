@@ -4319,11 +4319,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\divya\\Downloads\\TRENDS-2\\TRENDS-2\\Etrends\\EcommerceAPI\\EcommerceAPI.csproj",
+      "projectUniqueName": "C:\\Users\\divya\\OneDrive\\Desktop\\TRENDS\\TRENDS\\Etrends\\EcommerceAPI\\EcommerceAPI.csproj",
       "projectName": "EcommerceAPI",
-      "projectPath": "C:\\Users\\divya\\Downloads\\TRENDS-2\\TRENDS-2\\Etrends\\EcommerceAPI\\EcommerceAPI.csproj",
+      "projectPath": "C:\\Users\\divya\\OneDrive\\Desktop\\TRENDS\\TRENDS\\Etrends\\EcommerceAPI\\EcommerceAPI.csproj",
       "packagesPath": "C:\\Users\\divya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\divya\\Downloads\\TRENDS-2\\TRENDS-2\\Etrends\\EcommerceAPI\\obj\\",
+      "outputPath": "C:\\Users\\divya\\OneDrive\\Desktop\\TRENDS\\TRENDS\\Etrends\\EcommerceAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\divya\\AppData\\Roaming\\NuGet\\NuGet.Config"
