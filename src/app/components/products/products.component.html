@@ -1,0 +1,52 @@
+<div class="products-container">
+  <div class="filters">
+    <div class="category-filter">
+      <h3>Categories</h3>
+      <div class="category-list">
+        <button
+          [class.active]="selectedCategory === ''"
+          (click)="selectedCategory = ''; filterProducts()"
+        >
+          All Products
+        </button>
+        <button
+          *ngFor="let category of categories"
+          [class.active]="selectedCategory === category"
+          (click)="selectedCategory = category; filterProducts()"
+        >
+          {{ category }}
+        </button>
+      </div>
+    </div>
+
+    <div class="sort-filter">
+      <h3>Sort By</h3>
+      <select [(ngModel)]="sortBy" (change)="onSortChange()">
+        <option value="name">Name (A-Z)</option>
+        <option value="price-low">Price (Low to High)</option>
+        <option value="price-high">Price (High to Low)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="products-grid">
+    <div class="product-card" *ngFor="let product of filteredProducts">
+      <div class="product-icon" [ngClass]="getProductIcon(product.category)">
+        <i class="fas" [class]="getProductIcon(product.category)"></i>
+      </div>
+      <div class="product-info">
+        <h3>{{ product.name }}</h3>
+        <p class="price">₹{{ product.price }}</p>
+        <p class="description">{{ product.description }}</p>
+        <button class="add-to-cart" (click)="addToCart(product)">
+          <i class="fas fa-cart-plus"></i>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-products" *ngIf="filteredProducts.length === 0">
+    <p>No products found in this category.</p>
+  </div>
+</div> 

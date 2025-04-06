@@ -1,0 +1,38 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to E-Trends</h1>
+      <p>Discover the latest fashion trends at amazing prices</p>
+      <a routerLink="/products" class="cta-button">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+      <div class="category-card" *ngFor="let category of categories">
+        <h3>{{ category }}</h3>
+        <a [routerLink]="['/products']" [queryParams]="{category: category}">Browse {{ category }}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+   
+  <section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let product of featuredProducts">
+        <img [src]="product.imageUrl" [alt]="product.name">
+        <div class="product-info">
+          <h3>{{ product.name }}</h3>
+          <p class="price">₹{{ product.price }}</p>
+          <p class="description">{{ product.description }}</p>
+          <button class="add-to-cart" (click)="addToCart(product)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div> 

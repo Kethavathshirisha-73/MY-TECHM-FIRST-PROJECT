@@ -1,0 +1,27 @@
+<header class="header">
+  <div class="header-content">
+    <div class="logo">
+      <a routerLink="/home">E-Trends</a>
+    </div>
+
+    <nav class="nav-menu">
+      <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a routerLink="/products" routerLinkActive="active">Products</a>
+      <a routerLink="/cart" routerLinkActive="active">
+        Cart
+        <ng-container *ngIf="cartItemCount$ | async as count">
+          <span class="cart-count" *ngIf="count > 0">{{ count }}</span>
+        </ng-container>
+      </a>
+    </nav>
+
+    <div class="auth-section">
+      <ng-container *ngIf="isAuthenticated$ | async">
+        <button class="logout-button" (click)="logout()">Logout</button>
+      </ng-container>
+      <ng-container *ngIf="!(isAuthenticated$ | async)">
+        <a routerLink="/login" class="login-button">Login</a>
+      </ng-container>
+    </div>
+  </div>
+</header> 
