@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # E-Trends - E-commerce Clothing Website
 
 A modern e-commerce website built with Angular for selling clothing items. The application includes features like user authentication, product browsing, shopping cart, and responsive design.
@@ -74,3 +75,7 @@ src/
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+=======
+# MY-TECHM-FIRST-PROJECT
+An E-commerce application for shopping cloths
+>>>>>>> 94a8cdd037d111289dcfbcf2ed62405ecb48c945
