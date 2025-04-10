@@ -14,8 +14,11 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   isAuthenticated$: Observable<boolean>;
+  title: any;
+  imagePath: string = "Classic T-Shirt.jpg"
 
   constructor(private authService: AuthService) {
     this.isAuthenticated$ = this.authService.isAuthenticated$;
+    
   }
 }

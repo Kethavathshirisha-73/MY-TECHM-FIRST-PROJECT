@@ -7,19 +7,19 @@
   <div class="cart-content">
     <div class="cart-items" *ngIf="cartItems.length > 0">
       <div class="cart-item" *ngFor="let item of cartItems">
-        <div class="product-icon">
-          <i class="fas" [class]="getProductIcon(item.product.name)"></i>
+        <div class="product-image">
+          <img [src]="item.product.imageUrl" [alt]="item.product.name" />
         </div>
         <div class="item-details">
           <h3>{{ item.product.name }}</h3>
           <p class="price">₹{{ item.product.price.toFixed(2) }}</p>
           <div class="quantity-controls">
-            <button (click)="updateQuantity(item, item.quantity - 1)" [disabled]="item.quantity <= 1">
-              <i class="fas fa-minus"></i>
+            <button class="quantity-btn minus" (click)="updateQuantity(item, item.quantity - 1)" [disabled]="item.quantity <= 1">
+              <span class="symbol">-</span>
             </button>
-            <span>{{ item.quantity }}</span>
-            <button (click)="updateQuantity(item, item.quantity + 1)">
-              <i class="fas fa-plus"></i>
+            <span class="quantity-value">{{ item.quantity }}</span>
+            <button class="quantity-btn plus" (click)="updateQuantity(item, item.quantity + 1)">
+              <span class="symbol">+</span>
             </button>
           </div>
           <button class="remove-button" (click)="removeItem(item.product.id)">

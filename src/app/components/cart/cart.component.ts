@@ -40,17 +40,4 @@ export class CartComponent implements OnInit {
   clearCart(): void {
     this.cartService.clearCart();
   }
-
-  getProductIcon(productName: string): string {
-    const name = productName.toLowerCase();
-    if (name.includes('t-shirt')) return 'fa-tshirt';
-    if (name.includes('shirt')) return 'fa-shirt';
-    if (name.includes('jeans') || name.includes('pants')) return 'fa-socks';
-    if (name.includes('hoodie') || name.includes('sweatshirt')) return 'fa-shirt';
-    if (name.includes('dress')) return 'fa-person-dress';
-    if (name.includes('jacket')) return 'fa-vest';
-    if (name.includes('sweater')) return 'fa-vest-patches';
-    if (name.includes('shorts')) return 'fa-socks';
-    return 'fa-tshirt'; // default icon
-  }
-} 
+}

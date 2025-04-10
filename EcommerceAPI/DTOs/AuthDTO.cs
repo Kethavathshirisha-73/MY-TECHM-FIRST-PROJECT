@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
+
 namespace EcommerceAPI.DTOs
 {
     public class UserRegisterDto

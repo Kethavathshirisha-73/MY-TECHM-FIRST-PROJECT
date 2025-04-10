@@ -113,6 +113,7 @@ export class CartService {
     } catch (error) {
       console.error('Error calculating cart total:', error);
       return 0;
+      
     }
   }
-} 
+}

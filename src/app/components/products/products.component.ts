@@ -16,68 +16,149 @@ export class ProductsComponent implements OnInit {
   products: Product[] = [
     {
       id: 1,
-      name: 'Classic T-Shirt',
-      price: 249.99,
-      description: 'Comfortable cotton t-shirt in various colors',
-      category: 'T-Shirts',
-      imageUrl: ''
+      name: 'Crop T-Shirt Combo',
+      price: 999,
+      description: 'Comfortable cotton t-shirt ',
+      imageUrl: 'assets/tshirt.jpg',
+      category: 'T-Shirts'
     },
     {
       id: 2,
-      name: 'Denim Jeans',
-      price: 299.99,
-      description: 'Classic fit denim jeans with perfect comfort',
-      category: 'Pants',
-      imageUrl: ''
+      name: 'Classic T-Shirt',
+      price: 1399,
+      description: 'Couple Combo T-Shirt',
+      imageUrl: 'assets/tshirt1.jpg',
+      category: 'T-Shirts'
     },
     {
       id: 3,
-      name: 'Hooded Sweatshirt',
-      price: 279.99,
-      description: 'Warm and cozy hoodie for casual wear',
-      category: 'Hoodies',
-      imageUrl: ''
+      name: 'Denim Jeans',
+      price: 899.99,
+      description: 'Classic fit denim jeans',
+      imageUrl: 'assets/jeans.jpg',
+      category: 'Pants'
     },
     {
       id: 4,
-      name: 'Summer Dress',
-      price: 349.99,
-      description: 'Light and flowy summer dress',
-      category: 'Dresses',
-      imageUrl: ''
+      name: 'Denim Jeans',
+      price: 1111.99,
+      description: 'Classic fit denim jeans',
+      imageUrl: 'assets/jeans1.jpg',
+      category: 'Pants'
     },
     {
       id: 5,
-      name: 'Sports Jacket',
-      price: 399.99,
-      description: 'Lightweight sports jacket for active lifestyle',
-      category: 'Jackets',
-      imageUrl: ''
+      name: 'Denim Jeans',
+      price: 1199.99,
+      description: 'Classic fit denim jeans',
+      imageUrl: 'assets/jeans2.jpg',
+      category: 'Pants'
     },
     {
       id: 6,
-      name: 'Formal Shirt',
-      price: 229.99,
-      description: 'Classic formal shirt for professional look',
-      category: 'Shirts',
-      imageUrl: ''
+      name: 'Casual Shirt',
+      price: 889.99,
+      description: 'Casual button-up shirt',
+      imageUrl: 'assets/shirt.jpg',
+      category: 'Shirts'
     },
     {
       id: 7,
-      name: 'Winter Sweater',
-      price: 289.99,
-      description: 'Warm knit sweater for cold weather',
-      category: 'Sweaters',
-      imageUrl: ''
+      name: 'Ethnic Combo',
+      price: 1133.99,
+      description: 'Stay cool and stylish in Ethnic wear with  lightweight and breathable Fabrics !',
+      imageUrl: 'assets/dress.jpg',
+      category: 'Dresses'
     },
     {
       id: 8,
+      name: 'Causal Wear',
+      price: 1300.99,
+      description: 'Causals combo',
+      imageUrl: 'assets/dress1.jpg',
+      category: 'Dresses'
+    },
+    {
+      id: 9,
+      name: 'Traditional Wear',
+      price: 999.99,
+      description: 'Ethnic Anarkali ',
+      imageUrl: 'assets/dress3.jpg',
+      category: 'Dresses'
+    },
+    {
+      id: 10,
+      name: 'Designer Wear',
+      price: 449.99,
+      description: 'Designer Anarkali ',
+      imageUrl: 'assets/dress4.jpg',
+      category: 'Dresses'
+   },
+   {
+      id: 11,
+      name: 'Designer Lehenga',
+      price: 1221.99,
+      description: 'Stylish and comfortable Designer Lehenga',
+      imageUrl: 'assets/dress5.jpg',
+      category: 'Dresses'
+   },
+   {
+      id: 12,
+      name: 'Summer Dress',
+      price: 3117.99,
+      description: 'Stay cool and stylish this summer with our lightweight and breathable summer dress! ',
+      imageUrl: 'assets/dress6.jpg',
+      category: 'Dresses'
+    },
+    /*{
+      id: 13,
+      name: 'Hoodies',
+      price: 1500,
+      description: 'Stay warm and cozy with our premium hoodies!',
+      imageUrl: 'assets/hoody.jpg',
+      category: 'Hoodies'
+    },*/
+    {
+      id: 14,
+      name: 'Pants',
+      price: 1999.00,
+      description: 'Stay BRIGHT!',
+      imageUrl: 'assets/pants.jpg',
+      category: 'Pants'
+    },
+    {
+      id: 15,
+      name: 'Hoodies',
+      price: 1000.99,
+      description: 'Stay warm and cozy with our premium hoodies!',
+      imageUrl: 'assets/hoody.jpg',
+      category: 'Hoodies'
+    },
+    {
+      id: 16,
+      name: 'Jackets',
+      price: 1930.99,
+      description: 'Stay warm and cozy with our premium hoodies!',
+      imageUrl: 'assets/jacket.jpg',
+      category: 'Jackets'
+    },
+    {
+      id: 17,
+      name: 'Winter Sweaters',
+      price: 999.99,
+      description: 'Warm knit sweater for cold weather!',
+      imageUrl: 'assets/sweater.jpg',
+      category: 'Sweaters'
+    },
+    {
+      id: 18,
       name: 'Cargo Shorts',
-      price: 259.99,
-      description: 'Comfortable cargo shorts with multiple pockets',
-      category: 'Shorts',
-      imageUrl: ''
+      price: 1200.00,
+      description: ' Comfortable cargo shorts with multiple pockets',
+      imageUrl: 'assets/short.jpg',
+      category: 'Shorts'
     }
+
   ];
 
   filteredProducts: Product[] = [];
@@ -138,23 +219,23 @@ export class ProductsComponent implements OnInit {
   getProductIcon(category: string): string {
     switch (category.toLowerCase()) {
       case 't-shirts':
-        return 'fa-tshirt';
+        return 'tshirt';
       case 'pants':
-        return 'fa-socks'; // Using socks icon as pants icon is not available
+        return 'socks'; // Using socks icon as pants icon is not available
       case 'hoodies':
         return 'fa-shirt';
       case 'dresses':
-        return 'fa-person-dress';
+        return 'person-dress';
       case 'jackets':
-        return 'fa-vest';
+        return 'vest';
       case 'shirts':
-        return 'fa-shirt';
+        return 'shirt';
       case 'sweaters':
-        return 'fa-vest-patches';
+        return 'vest-patches';
       case 'shorts':
-        return 'fa-socks'; // Using socks icon as shorts icon is not available
+        return 'socks'; // Using socks icon as shorts icon is not available
       default:
-        return 'fa-shirt';
+        return 'shirt';
     }
   }
 } 
